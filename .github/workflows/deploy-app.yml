@@ -5,7 +5,7 @@ on:
     workflows:
       - SonarQube Analysis
     types:
-      - success
+      - completed
 
 jobs:
   build-deploy:
