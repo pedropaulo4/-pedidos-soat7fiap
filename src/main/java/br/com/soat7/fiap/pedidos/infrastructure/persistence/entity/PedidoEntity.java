@@ -29,7 +29,7 @@ public class PedidoEntity {
     @Enumerated(EnumType.STRING)
     private StatusPagamento statusPagamento;
 
-    @ManyToMany
+    @ManyToMany()
     @JoinTable(
             name = "PedidoProduto",
             joinColumns = @JoinColumn(name = "pedido_id"),

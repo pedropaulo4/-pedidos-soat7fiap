@@ -16,15 +16,6 @@ import org.springframework.http.ResponseEntity;
 public class PedidoConfig {
 
     @Bean
-    public PagamentoClient pagamentoClient() {
-        return new PagamentoClient() {
-            @Override
-            public ResponseEntity<Pedido> efetuarPagamento(Pedido pedido) {
-                return null;
-            }
-        }; // Se o construtor não precisar de argumentos
-    }
-    @Bean
     PagamentoService pagamentoService(PagamentoClient pagamentoClient) {
         return new PagamentoService(pagamentoClient);
     }
@@ -62,6 +53,4 @@ public class PedidoConfig {
     PedidoGateway pedidoGateway(PedidoRepository pedidoRepository) {
         return new PedidoRepositoryGateway(pedidoRepository);
     }
-
-
 }
