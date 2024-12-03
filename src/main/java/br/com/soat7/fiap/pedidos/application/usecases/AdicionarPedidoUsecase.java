@@ -26,15 +26,17 @@ public class AdicionarPedidoUsecase {
 
     public Pedido criarPedido(Pedido pedido) throws Exception {
         pedido.setDataCadastro(new Date());
-         pedido.setStatus(StatusPedido.RECEBIDO);
+        pedido.setStatus(StatusPedido.RECEBIDO);
         pedido.setStatusPagamento(StatusPagamento.AGUARDANDO_PAGAMENTO);
 
-        Pedido pedidoEnviado = pagamentoService.efetuarPagamento(pedido);
+        pedido = pedidoGateway.adicionarPedido(pedido);
 
-        if(StatusPagamento.REPROVADO.equals(pedidoEnviado.getStatusPagamento())) {
+        pedido = pagamentoService.efetuarPagamento(pedido);
+
+        if(StatusPagamento.REPROVADO.equals(pedido.getStatusPagamento())) {
             throw new Exception("Pedido cancelado porque o pagamento do pedido foi reprovado, tente novamente.");
         }
 
-        return pedidoGateway.adicionarPedido(pedido);
+        return pedido;
     }
 }
