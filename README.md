@@ -19,7 +19,10 @@ Relatório Jacoco:
 
 
 Sonar:
+https://sonarcloud.io/summary/new_code?id=fiap-soat7-dilpv_pedidos
+
 ![sonar](https://github.com/user-attachments/assets/4bfa29e3-1a9c-406f-9eef-1d21926f9d0c)
+
 
 
 ## Infraestrutura
