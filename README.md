@@ -15,10 +15,12 @@ Vídeo explicativo da aquitetura do projeto: [https://youtu.be/WHrUoj0jR2U](http
 ### Evidencias dos testes 
 
 Relatório Jacoco: 
-![jacoco relatorio pedidos](https://github.com/user-attachments/assets/d8863552-d380-4bbd-b823-ed58dd68c4b8)
+![jacoco relatorio pedidos](https://github.com/user-attachments/assets/85c79ce9-9bcd-435b-9d7a-3c35a784c622)
+
 
 Sonar:
-![sonar](https://github.com/user-attachments/assets/0b394524-7838-468d-a8fe-ac6629d4b77b)
+![sonar](https://github.com/user-attachments/assets/4bfa29e3-1a9c-406f-9eef-1d21926f9d0c)
+
 
 ## Infraestrutura
 
